@@ -1,0 +1,57 @@
+# Mantenedor de Reservas de Alojamiento
+
+Aplicación desarrollada en Kotlin como parte de una prueba de Programación Orientada a Objetos.
+
+El sistema permite registrar y consultar reservas de alojamiento manteniendo la información únicamente en memoria durante la ejecución del programa.
+
+## Objetivo
+
+Desarrollar un sistema que permita administrar reservas de alojamiento aplicando principios de Programación Orientada a Objetos y separación de responsabilidades.
+
+## Funcionalidades
+
+- Registrar reservas de alojamiento.
+- Validar los datos de las reservas.
+- Evitar reservas con identificadores duplicados.
+- Consultar las reservas registradas.
+- Calcular el valor total de cada reserva.
+- Calcular el total recaudado de todas las reservas.
+- Filtrar reservas según el tipo de alojamiento.
+- Mostrar la información de las reservas en consola.
+- Manejar errores durante el registro.
+- Demostrar herencia y polimorfismo.
+- Simular una operación que demora antes de mostrar las reservas.
+
+## Tipos de alojamiento
+
+El sistema contempla únicamente los siguientes tipos:
+
+- Habitación
+- Cabaña
+- Departamento
+
+Estos tipos están representados mediante un `enum class` en Kotlin.
+
+## Estructura del proyecto
+
+El proyecto utiliza una separación por capas:
+
+```text
+src/
+└── main/
+    └── kotlin/
+        ├── model/
+        │   ├── Reserva.kt
+        │   ├── ReservaAlojamiento.kt
+        │   └── TipoAlojamiento.kt
+        │
+        ├── repository/
+        │   └── ReservaRepository.kt
+        │
+        ├── service/
+        │   └── ReservaService.kt
+        │
+        ├── controller/
+        │   └── ReservaController.kt
+        │
+        └── Main.kt
